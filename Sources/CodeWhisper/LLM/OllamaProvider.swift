@@ -1,7 +1,9 @@
 import Foundation
+import SwiftAgent
 
+/// Delegiert an SwiftAgent's `OllamaProvider`, statt die HTTP-Logik doppelt zu pflegen.
 final class OllamaProvider: LLMProvider, @unchecked Sendable {
-    private let underlying: OpenAICompatibleProvider
+    private let underlying: SwiftAgent.OllamaProvider
 
     init(
         model: String = "llama3.2",
@@ -10,16 +12,22 @@ final class OllamaProvider: LLMProvider, @unchecked Sendable {
         temperature: Double? = nil,
         maxTokens: Int? = nil
     ) {
-        let url = URL(string: "http://\(host):\(port)")!
-        self.underlying = OpenAICompatibleProvider(
+        self.underlying = SwiftAgent.OllamaProvider(
             modelName: model,
-            baseURL: url,
+            host: host,
+            port: port,
             temperature: temperature,
             maxTokens: maxTokens
         )
     }
 
     func chat(messages: [ChatMessage]) async throws -> String {
-        try await underlying.chat(messages: messages)
+        let mapped = messages.map { $0.asSwiftAgentMessage() }
+        do {
+            let response = try await underlying.chat(messages: mapped, tools: nil)
+            return response.content
+        } catch let error as SwiftAgent.LLMError {
+            throw error.asCodeWhisperError()
+        }
     }
 }

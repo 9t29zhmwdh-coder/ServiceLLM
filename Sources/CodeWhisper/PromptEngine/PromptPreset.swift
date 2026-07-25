@@ -12,7 +12,7 @@ enum PromptPreset: String, CaseIterable, Sendable {
     var systemPrompt: String {
         switch self {
         case .explain:
-            return "You are a helpful code explainer. Explain the following code clearly and concisely in plain English. Focus on what it does, how it works, and any notable patterns or edge cases."
+            return "You are a helpful code explainer. Explain the following code clearly and concisely in plain language. Focus on what it does, how it works, and any notable patterns or edge cases."
         case .refactor:
             return "You are a code refactoring expert. Refactor the following code for clarity, readability, and best practices. Apply SOLID principles where appropriate. Return only the refactored code without explanations."
         case .optimize:

@@ -72,6 +72,16 @@ final class PromptBuilderTests: XCTestCase {
         XCTAssertEqual(messages[0].content, systemPrompt)
     }
 
+    func testBuildDefaultsToEnglishWithNoLanguageSuffix() {
+        let messages = PromptBuilder.build(preset: .explain, code: "let x = 5")
+        XCTAssertFalse(messages[0].content.contains("Respond in German"))
+    }
+
+    func testBuildAppendsGermanInstructionForGermanLanguage() {
+        let messages = PromptBuilder.build(preset: .explain, code: "let x = 5", language: .de)
+        XCTAssertTrue(messages[0].content.contains("Respond in German"))
+    }
+
     func testBuildWithRefactorPreset() {
         let code = "x=5+3"
         let messages = PromptBuilder.build(preset: .refactor, code: code)

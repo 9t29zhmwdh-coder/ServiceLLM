@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "swiftagent",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/9t29zhmwdh-coder/SwiftAgent.git",
+      "state" : {
+        "revision" : "b1b165c68cfd32f3fbf666cea0d992a2543672b5",
+        "version" : "1.1.0"
+      }
+    }
+  ],
+  "version" : 2
+}

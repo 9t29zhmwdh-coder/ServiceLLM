@@ -7,6 +7,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(_ notification: Notification) {
         UNUserNotificationCenterDelegate.register()
+        NSApp.servicesProvider = self
         Task { @MainActor in
             statusBarController = StatusBarController()
         }
@@ -23,7 +24,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let messages = PromptBuilder.build(
             preset: preset,
             code: code,
-            customPrompt: settings.customSystemPrompt
+            customPrompt: settings.customSystemPrompt,
+            language: L10n.shared.language
         )
 
         ResponseWindowController.shared.showLoading(preset: L10n.shared.t(preset.localizationKey)) {

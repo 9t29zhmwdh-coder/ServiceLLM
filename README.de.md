@@ -32,6 +32,8 @@ Die Oberfläche von CodeWhisper ist auf Englisch (Standard) und Deutsch verfügb
 
 **In der Praxis:** du markierst Code in einer beliebigen macOS-App (Xcode, VS Code, ein Texteditor, sogar ein Browser-Textfeld), machst einen Rechtsklick, wählst im Services-Untermenü eine der CodeWhisper-Aktionen (Explain, Refactor, Optimize, Add Comments, Find Bugs, Write Tests oder einen selbst definierten Custom-Prompt), und CodeWhisper schickt diese Auswahl an den KI-Anbieter, den du in den Einstellungen konfiguriert hast (ein Cloud-Modell wie Claude, oder ein lokales Modell via Ollama/llama.cpp, falls nichts dein Gerät verlassen soll). Die Antwort erscheint danach so, wie du es eingestellt hast: als schwebendes Popup-Fenster, in die Zwischenablage kopiert, als macOS-Benachrichtigung, oder direkt über deine ursprüngliche Auswahl eingefügt.
 
+![CodeWhisper: Explain aus dem Services-Menü von Xcode ausgelöst, Antwort über ein lokales Ollama-Modell](docs/screenshot-xcode-services.png)
+
 ## Funktionen
 
 | Preset | Beschreibung |

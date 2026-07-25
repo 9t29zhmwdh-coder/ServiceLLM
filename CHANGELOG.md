@@ -5,6 +5,15 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+### Fixed
+
+- `NSApp.servicesProvider` was never registered, so every "CodeWhisper: ..." entry in the Services menu silently did nothing regardless of provider or settings.
+- LLM responses ignored the app's UI language (English/German) and always came back in English; the Explain preset even hardcoded "in plain English". Responses now follow the current app language.
+
+### Changed
+
+- `OllamaProvider` and `LlamaCppProvider` now delegate to [SwiftAgent](https://github.com/9t29zhmwdh-coder/SwiftAgent) (>= 1.1.0) instead of duplicating its HTTP logic. Claude, OpenAI and Mistral are unaffected.
+
 ## [1.0.1] - 2026-07-20
 
 ### Changed
