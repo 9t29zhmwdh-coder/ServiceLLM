@@ -58,6 +58,26 @@ CodeWhisper's UI is available in English (default) and German, following your sy
 | OpenAI | cloud, configurable API key |
 | Mistral | cloud, configurable API key |
 
+### Local AI or cloud API, your choice
+
+CodeWhisper doesn't pick a side. Point it at a local model (Ollama or llama.cpp) and nothing you select ever leaves your Mac, no API key needed. Or point it at a cloud model (Claude, OpenAI, Mistral) with your own API key for a stronger model at the cost of that selection being sent to that provider. Switch anytime in Settings, per-preset temperature/token limits apply either way.
+
+### Examples
+
+**Find Bugs**, run on:
+```swift
+func divide(_ a: Int, _ b: Int) -> Int {
+    return a / b
+}
+```
+> Divides without checking for `b == 0`, which crashes with a division-by-zero trap at runtime. Also, `Int` division truncates, silently discarding any fractional result if that wasn't intended. Suggested fix: return an optional or throw, and guard `b != 0` before dividing.
+
+**Explain**, run on:
+```swift
+let cache = NSCache<NSString, UIImage>()
+```
+> Creates an in-memory cache mapping string keys to images. Unlike a plain dictionary, `NSCache` automatically evicts entries under memory pressure and is thread-safe, which is why it's the standard choice for image caches instead of a `[String: UIImage]`.
+
 ### Output Modes
 
 - **Popup Window**: floating panel with Copy and Paste Back buttons
