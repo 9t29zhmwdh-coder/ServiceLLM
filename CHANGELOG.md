@@ -3,6 +3,12 @@
 All notable changes to CodeWhisper will be documented here.
 Format based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [Unreleased]
+
+### Added
+
+- README: a "Local AI or cloud API, your choice" section explaining the privacy tradeoff, plus concrete Find Bugs/Explain examples with real input/output.
+
 ## [1.0.2] - 2026-07-25
 
 ### Fixed

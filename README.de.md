@@ -56,6 +56,26 @@ Die Oberfläche von CodeWhisper ist auf Englisch (Standard) und Deutsch verfügb
 | Ollama | Lokal, Host/Port konfigurierbar |
 | llama.cpp | Lokal, Host/Port konfigurierbar |
 
+### Lokale KI oder Cloud API, deine Wahl
+
+CodeWhisper legt sich nicht fest. Zeig auf ein lokales Modell (Ollama oder llama.cpp), und deine Auswahl verlässt nie deinen Mac, kein API-Schlüssel nötig. Oder zeig auf ein Cloud-Modell (Claude, OpenAI, Mistral) mit eigenem API-Schlüssel für ein stärkeres Modell, auf Kosten davon, dass diese Auswahl an den jeweiligen Anbieter geschickt wird. Jederzeit umschaltbar in den Einstellungen, Temperature/Token-Limits pro Preset gelten in beiden Fällen.
+
+### Beispiele
+
+**Bugs finden**, angewendet auf:
+```swift
+func divide(_ a: Int, _ b: Int) -> Int {
+    return a / b
+}
+```
+> Teilt ohne Prüfung auf `b == 0`, was zur Laufzeit mit einem Division-durch-null-Absturz endet. Ausserdem schneidet `Int`-Division den Nachkommaanteil ab, was stillschweigend Ergebnisse verwirft, falls das nicht beabsichtigt war. Vorschlag: einen Optional zurückgeben oder werfen, und vorher `b != 0` prüfen.
+
+**Erklären**, angewendet auf:
+```swift
+let cache = NSCache<NSString, UIImage>()
+```
+> Erstellt einen Cache im Arbeitsspeicher, der String-Schlüssel auf Bilder abbildet. Anders als ein einfaches Dictionary räumt `NSCache` Einträge automatisch bei Speicherdruck und ist thread-sicher, deshalb ist es die Standardwahl für Bild-Caches statt eines `[String: UIImage]`.
+
 ### Ausgabe-Modi
 
 - **Popup-Fenster**: schwebendes Panel mit «Kopieren»- und «Zurückpaste»-Schaltfläche
