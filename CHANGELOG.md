@@ -7,6 +7,21 @@ Releases up to and including 1.0.2 were published under the project's previous n
 
 ## [Unreleased]
 
+## [2.1.0] - 2026-07-28
+
+### Added
+
+- The release DMG is now a universal binary, so it runs on Intel Macs as well as Apple Silicon. `make bundle` builds `--arch arm64 --arch x86_64`, and a `verify-arch` step fails the build instead of shipping a silently single-arch app.
+
+### Changed
+
+- The Makefile asks SwiftPM for the binary directory via `--show-bin-path` rather than hardcoding `.build/release`. Multi-arch output lands elsewhere, and that path has moved between SwiftPM releases.
+- Requirements and the download line in both READMEs now say universal binary, and the architecture badge reads `Universal arm64 + x86_64`. This supersedes what 2.0.3 documented.
+
+### Note
+
+- Building for x86_64 emits a deprecation warning against recent macOS SDKs, since Apple is phasing the architecture out. The build works, but expect Intel support to become a maintenance decision rather than a given.
+
 ## [2.0.3] - 2026-07-28
 
 ### Fixed
