@@ -7,6 +7,12 @@ Releases up to and including 1.0.2 were published under the project's previous n
 
 ## [Unreleased]
 
+## [2.0.3] - 2026-07-28
+
+### Fixed
+
+- Both READMEs listed macOS 14 as the only hardware requirement while the released DMG has always shipped an arm64-only binary, so it will not start on an Intel Mac. The Requirements section and the download line now say so, and point Intel users at building from source.
+
 ## [2.0.2] - 2026-07-28
 
 ### Changed

@@ -20,7 +20,7 @@ Select code, right-click → Services → ServiceLLM: Explain. That's it.
 
 ---
 
-> 💾 **Download:** [macOS (DMG)](https://github.com/9t29zhmwdh-coder/ServiceLLM/releases/latest/download/ServiceLLM.dmg): always the latest release, not code-signed/notarized (Gatekeeper will show a warning on first run, right-click → Open). Or build from source, see Build & Install below.
+> 💾 **Download:** [macOS (DMG)](https://github.com/9t29zhmwdh-coder/ServiceLLM/releases/latest/download/ServiceLLM.dmg): always the latest release, Apple Silicon only, not code-signed/notarized (Gatekeeper will show a warning on first run, right-click → Open). Or build from source, see Build & Install below.
 
 ---
 
@@ -94,6 +94,7 @@ let cache = NSCache<NSString, UIImage>()
 ## Requirements
 
 - macOS 14 Sonoma or later
+- Apple Silicon for the released DMG, which ships an arm64-only binary. On an Intel Mac, build from source instead, `make install` produces an x86_64 build there.
 - Xcode Command Line Tools (`xcode-select --install`)
 - Swift 5.9+
 
