@@ -7,6 +7,12 @@ Releases up to and including 1.0.2 were published under the project's previous n
 
 ## [Unreleased]
 
+## [2.0.1] - 2026-07-28
+
+### Removed
+
+- `RayStudio.png`. The studio logo went unused once the app icon took over both README headers in 2.0.0.
+
 ## [2.0.0] - 2026-07-28
 
 ### Added
