@@ -47,7 +47,7 @@ final class ResponseWindowController {
             backing: .buffered,
             defer: false
         )
-        p.title = "CodeWhisper"
+        p.title = "ServiceLLM"
         p.contentView = contentView
         p.isFloatingPanel = true
         p.level = .floating

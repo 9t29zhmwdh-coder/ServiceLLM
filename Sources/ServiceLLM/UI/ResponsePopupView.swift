@@ -15,7 +15,7 @@ struct ResponsePopupView: View {
             HStack {
                 Image(systemName: "sparkles")
                     .foregroundStyle(.purple)
-                Text("CodeWhisper")
+                Text("ServiceLLM")
                     .fontWeight(.semibold)
                 Spacer()
                 Button(action: { onClose?() }) {

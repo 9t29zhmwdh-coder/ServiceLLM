@@ -1,5 +1,5 @@
-# Copilot Instructions for CodeWhisper
-CodeWhisper is a macOS AI code assistant integrated directly into Xcode and any text editor via System Services. Select code, right-click, choose Services, CodeWhisper sends the selection to your configured AI provider (Claude, OpenAI, Mistral, or a local model via Ollama/llama.cpp) and returns the result as a popup, clipboard copy, notification, or paste back.
+# Copilot Instructions for ServiceLLM
+ServiceLLM is a macOS AI code assistant that hooks into the system Services menu, so it works with any programming language in any app, Xcode and VS Code included. Select code, right-click, choose Services, ServiceLLM sends the selection to your configured AI provider (Claude, OpenAI, Mistral, or a local model via Ollama/llama.cpp) and returns the result as a popup, clipboard copy, notification, or paste back.
 ## Code style
 - Functions stay small and single-purpose, prefer under 20 lines
 - Naming: verb+noun for functions, clear intent for variables, no x/temp/data

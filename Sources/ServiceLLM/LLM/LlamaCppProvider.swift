@@ -1,18 +1,18 @@
 import Foundation
 import SwiftAgent
 
-/// Delegiert an SwiftAgent's `OllamaProvider`, statt die HTTP-Logik doppelt zu pflegen.
-final class OllamaProvider: LLMProvider, @unchecked Sendable {
-    private let underlying: SwiftAgent.OllamaProvider
+/// Delegiert an SwiftAgent's `LlamaCppProvider`, statt die HTTP-Logik doppelt zu pflegen.
+final class LlamaCppProvider: LLMProvider, @unchecked Sendable {
+    private let underlying: SwiftAgent.LlamaCppProvider
 
     init(
-        model: String = "llama3.2",
+        model: String = "local-model",
         host: String = "localhost",
-        port: Int = 11434,
+        port: Int = 8080,
         temperature: Double? = nil,
         maxTokens: Int? = nil
     ) {
-        self.underlying = SwiftAgent.OllamaProvider(
+        self.underlying = SwiftAgent.LlamaCppProvider(
             modelName: model,
             host: host,
             port: port,
@@ -27,7 +27,7 @@ final class OllamaProvider: LLMProvider, @unchecked Sendable {
             let response = try await underlying.chat(messages: mapped, tools: nil)
             return response.content
         } catch let error as SwiftAgent.LLMError {
-            throw error.asCodeWhisperError()
+            throw error.asServiceLLMError()
         }
     }
 }

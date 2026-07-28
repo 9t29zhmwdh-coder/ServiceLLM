@@ -51,7 +51,7 @@ final class L10n: ObservableObject {
 
 private let strings: [AppLanguage: [String: String]] = [
     .en: [
-        "settings.windowTitle": "CodeWhisper Settings",
+        "settings.windowTitle": "ServiceLLM Settings",
         "settings.tab.provider": "Provider",
         "settings.tab.output": "Output",
         "settings.tab.presets": "Presets",
@@ -81,7 +81,7 @@ private let strings: [AppLanguage: [String: String]] = [
         "settings.general.languageSystem": "System",
 
         "statusbar.settings": "Settings…",
-        "statusbar.quit": "Quit CodeWhisper",
+        "statusbar.quit": "Quit ServiceLLM",
 
         "popup.copy": "Copy",
         "popup.copied": "Copied!",
@@ -107,7 +107,7 @@ private let strings: [AppLanguage: [String: String]] = [
         "error.prefix": "Error",
     ],
     .de: [
-        "settings.windowTitle": "CodeWhisper-Einstellungen",
+        "settings.windowTitle": "ServiceLLM-Einstellungen",
         "settings.tab.provider": "Anbieter",
         "settings.tab.output": "Ausgabe",
         "settings.tab.presets": "Vorlagen",
@@ -137,7 +137,7 @@ private let strings: [AppLanguage: [String: String]] = [
         "settings.general.languageSystem": "System",
 
         "statusbar.settings": "Einstellungen…",
-        "statusbar.quit": "CodeWhisper beenden",
+        "statusbar.quit": "ServiceLLM beenden",
 
         "popup.copy": "Kopieren",
         "popup.copied": "Kopiert!",

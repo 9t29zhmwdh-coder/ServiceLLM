@@ -14,9 +14,9 @@ enum OutputController {
             ResponseWindowController.shared.showResponse(text)
         case .clipboard:
             copyToClipboard(text)
-            showBriefNotification(title: "CodeWhisper", body: L10n.shared.t("notification.copiedToClipboard"))
+            showBriefNotification(title: "ServiceLLM", body: L10n.shared.t("notification.copiedToClipboard"))
         case .notification:
-            sendNotification(title: "CodeWhisper", body: text)
+            sendNotification(title: "ServiceLLM", body: text)
         case .pasteBack:
             Task { await pasteBack(text, to: callingApp) }
         }

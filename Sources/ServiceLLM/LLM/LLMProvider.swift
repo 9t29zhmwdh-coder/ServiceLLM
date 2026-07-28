@@ -39,9 +39,9 @@ extension ChatMessage {
 }
 
 extension SwiftAgent.LLMError {
-    /// Bridges SwiftAgent's error cases onto CodeWhisper's own `LLMError`,
+    /// Bridges SwiftAgent's error cases onto ServiceLLM's own `LLMError`,
     /// used by the local providers that now delegate to SwiftAgent.
-    func asCodeWhisperError() -> LLMError {
+    func asServiceLLMError() -> LLMError {
         switch self {
         case .invalidURL(let u):            return .invalidURL(u)
         case .httpError(let c, let b):      return .httpError(statusCode: c, body: b)

@@ -27,4 +27,4 @@
 
 ## Dual-Licensing Readiness
 
-Assessed 2026-07-11: Community-only, not a Dual-Licensing candidate. CodeWhisper is a single-developer productivity tool (AI code assistant via macOS Services) with no team, fleet or multi-tenant dimension anywhere on the roadmap. The planned v1.0.0 monetization path is Mac App Store submission, a paid-app model, not an open-core Community/Commercial split. No natural Enterprise-tier feature exists today; revisit only if a genuine team use case (e.g. shared prompt presets across an engineering org) emerges.
+Assessed 2026-07-11: Community-only, not a Dual-Licensing candidate. ServiceLLM is a single-developer productivity tool (AI code assistant via macOS Services) with no team, fleet or multi-tenant dimension anywhere on the roadmap. The planned v1.0.0 monetization path is Mac App Store submission, a paid-app model, not an open-core Community/Commercial split. No natural Enterprise-tier feature exists today; revisit only if a genuine team use case (e.g. shared prompt presets across an engineering org) emerges.

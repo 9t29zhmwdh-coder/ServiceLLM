@@ -1,4 +1,4 @@
-# Contributing to CodeWhisper
+# Contributing to ServiceLLM
 
 ## Getting Started
 
@@ -11,7 +11,7 @@
 ### Setup
 
 1. Fork the repository
-2. `git clone https://github.com/YOUR_USERNAME/CodeWhisper`
+2. `git clone https://github.com/YOUR_USERNAME/ServiceLLM`
 3. Open in Xcode: `open Package.swift` (this is a Swift Package, there is no `.xcodeproj`)
 4. Build: `⌘+B`, or `make install` to build, bundle, and install into `/Applications`
 

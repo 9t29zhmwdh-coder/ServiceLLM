@@ -3,19 +3,21 @@
 <plist version="1.0">
 <dict>
     <key>CFBundleExecutable</key>
-    <string>CodeWhisper</string>
+    <string>ServiceLLM</string>
     <key>CFBundleIdentifier</key>
-    <string>com.9t29zhmwdh.CodeWhisper</string>
+    <string>com.9t29zhmwdh.ServiceLLM</string>
     <key>CFBundleInfoDictionaryVersion</key>
     <string>6.0</string>
     <key>CFBundleName</key>
-    <string>CodeWhisper</string>
+    <string>ServiceLLM</string>
+    <key>CFBundleIconFile</key>
+    <string>AppIcon</string>
     <key>CFBundlePackageType</key>
     <string>APPL</string>
     <key>CFBundleVersion</key>
-    <string>1.0.2</string>
+    <string>2.0.0</string>
     <key>CFBundleShortVersionString</key>
-    <string>1.0.2</string>
+    <string>2.0.0</string>
     <key>LSMinimumSystemVersion</key>
     <string>14.0</string>
 
@@ -28,43 +30,43 @@
     <array>
         <dict>
             <key>NSMenuItem</key>
-            <dict><key>default</key><string>CodeWhisper: Explain</string></dict>
+            <dict><key>default</key><string>ServiceLLM: Explain</string></dict>
             <key>NSMessage</key><string>serviceExplain</string>
             <key>NSSendTypes</key><array><string>public.utf8-plain-text</string></array>
         </dict>
         <dict>
             <key>NSMenuItem</key>
-            <dict><key>default</key><string>CodeWhisper: Refactor</string></dict>
+            <dict><key>default</key><string>ServiceLLM: Refactor</string></dict>
             <key>NSMessage</key><string>serviceRefactor</string>
             <key>NSSendTypes</key><array><string>public.utf8-plain-text</string></array>
         </dict>
         <dict>
             <key>NSMenuItem</key>
-            <dict><key>default</key><string>CodeWhisper: Optimize</string></dict>
+            <dict><key>default</key><string>ServiceLLM: Optimize</string></dict>
             <key>NSMessage</key><string>serviceOptimize</string>
             <key>NSSendTypes</key><array><string>public.utf8-plain-text</string></array>
         </dict>
         <dict>
             <key>NSMenuItem</key>
-            <dict><key>default</key><string>CodeWhisper: Add Comments</string></dict>
+            <dict><key>default</key><string>ServiceLLM: Add Comments</string></dict>
             <key>NSMessage</key><string>serviceAddComments</string>
             <key>NSSendTypes</key><array><string>public.utf8-plain-text</string></array>
         </dict>
         <dict>
             <key>NSMenuItem</key>
-            <dict><key>default</key><string>CodeWhisper: Find Bugs</string></dict>
+            <dict><key>default</key><string>ServiceLLM: Find Bugs</string></dict>
             <key>NSMessage</key><string>serviceFindBugs</string>
             <key>NSSendTypes</key><array><string>public.utf8-plain-text</string></array>
         </dict>
         <dict>
             <key>NSMenuItem</key>
-            <dict><key>default</key><string>CodeWhisper: Write Tests</string></dict>
+            <dict><key>default</key><string>ServiceLLM: Write Tests</string></dict>
             <key>NSMessage</key><string>serviceWriteTests</string>
             <key>NSSendTypes</key><array><string>public.utf8-plain-text</string></array>
         </dict>
         <dict>
             <key>NSMenuItem</key>
-            <dict><key>default</key><string>CodeWhisper: Custom</string></dict>
+            <dict><key>default</key><string>ServiceLLM: Custom</string></dict>
             <key>NSMessage</key><string>serviceCustom</string>
             <key>NSSendTypes</key><array><string>public.utf8-plain-text</string></array>
         </dict>
@@ -72,6 +74,6 @@
 
     <!-- Accessibility usage description for paste-back feature -->
     <key>NSAccessibilityUsageDescription</key>
-    <string>CodeWhisper needs Accessibility access to paste AI responses back into your editor.</string>
+    <string>ServiceLLM needs Accessibility access to paste AI responses back into your editor.</string>
 </dict>
 </plist>

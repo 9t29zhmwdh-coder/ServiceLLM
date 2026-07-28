@@ -2,10 +2,10 @@
 
 ## Overview
 
-CodeWhisper is a macOS AI code assistant that hooks into the system via NSServices, letting any selected text in any app be processed by an AI model through the right-click Services menu.
+ServiceLLM is a macOS AI code assistant that hooks into the system via NSServices, letting any selected text in any app be processed by an AI model through the right-click Services menu.
 
 ```
-Sources/CodeWhisper/
+Sources/ServiceLLM/
 ├── main.swift                    # .accessory activation policy, app entry point
 ├── AppDelegate.swift              # 7 NSServices selectors, shared processing pipeline
 ├── LLM/
@@ -35,10 +35,10 @@ Sources/CodeWhisper/
 
 ## Design Decisions
 
-- **NSServices, not an Xcode extension**: registering 7 NSServices entries in `Info.plist` makes CodeWhisper available from the right-click Services menu of any Cocoa text view, including Xcode, without an Xcode-specific extension API. Paste Back still requires the user to grant Accessibility permission, since it synthesizes keystrokes into the frontmost app.
+- **NSServices, not an Xcode extension**: registering 7 NSServices entries in `Info.plist` makes ServiceLLM available from the right-click Services menu of any Cocoa text view, including Xcode, without an Xcode-specific extension API. Paste Back still requires the user to grant Accessibility permission, since it synthesizes keystrokes into the frontmost app.
 - **Provider abstraction**: `LLMProvider` is a protocol; Ollama, llama.cpp, OpenAI, and Mistral all share one `OpenAICompatibleProvider` implementation with different base URLs, while Claude gets its own `ClaudeProvider` since Anthropic's Messages API has a different request/response shape (system prompt as a top-level field, not a message).
 - **No third-party dependencies**: pure Foundation + AppKit/SwiftUI, no external Swift packages.
-- **Menu-bar only**: `NSApplication.shared.setActivationPolicy(.accessory)` keeps CodeWhisper out of the Dock; it lives entirely in the status bar and the Services menu.
+- **Menu-bar only**: `NSApplication.shared.setActivationPolicy(.accessory)` keeps ServiceLLM out of the Dock; it lives entirely in the status bar and the Services menu.
 
 ## CI
 

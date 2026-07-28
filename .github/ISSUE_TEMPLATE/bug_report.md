@@ -1,6 +1,6 @@
 ---
 name: Bug report
-about: Report a bug in CodeWhisper
+about: Report a bug in ServiceLLM
 labels: bug
 ---
 
@@ -18,7 +18,7 @@ What you expected to happen.
 - Xcode version:
 - AI backend (Ollama / llama.cpp / cloud):
 - Model name:
-- CodeWhisper version:
+- ServiceLLM version:
 
 ## Additional context
 Logs, screenshots, etc.

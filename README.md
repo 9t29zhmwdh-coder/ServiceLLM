@@ -1,34 +1,34 @@
 <div align="center">
-  <img src="RayStudio.png" alt="RayStudio Logo" width="120"/>
+  <img src="ServiceLLM.png" alt="ServiceLLM icon" width="120"/>
 
-  <h1>CodeWhisper</h1>
+  <h1>ServiceLLM</h1>
 </div>
 
 [🇩🇪 Deutsche Version](README.de.md)
 
-**macOS AI code assistant integrated directly into Xcode and any text editor via System Services.**
+**An AI code assistant that lives in the macOS Services menu: any language, any app, local or cloud models.**
 
-Select code, right-click → Services → CodeWhisper: Explain. That's it.
+Select code, right-click → Services → ServiceLLM: Explain. That's it.
 
-[![CI](https://github.com/9t29zhmwdh-coder/CodeWhisper/actions/workflows/ci.yml/badge.svg)](https://github.com/9t29zhmwdh-coder/CodeWhisper/actions) [![CodeQL](https://github.com/9t29zhmwdh-coder/CodeWhisper/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/9t29zhmwdh-coder/CodeWhisper/security/code-scanning) [![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/9t29zhmwdh-coder/CodeWhisper/badge)](https://securityscorecards.dev/viewer/?uri=github.com/9t29zhmwdh-coder/CodeWhisper) [![OpenSSF Best Practices](https://www.bestpractices.dev/projects/13713/badge)](https://www.bestpractices.dev/projects/13713)
+[![CI](https://github.com/9t29zhmwdh-coder/ServiceLLM/actions/workflows/ci.yml/badge.svg)](https://github.com/9t29zhmwdh-coder/ServiceLLM/actions) [![CodeQL](https://github.com/9t29zhmwdh-coder/ServiceLLM/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/9t29zhmwdh-coder/ServiceLLM/security/code-scanning) [![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/9t29zhmwdh-coder/ServiceLLM/badge)](https://securityscorecards.dev/viewer/?uri=github.com/9t29zhmwdh-coder/ServiceLLM) [![OpenSSF Best Practices](https://www.bestpractices.dev/projects/13713/badge)](https://www.bestpractices.dev/projects/13713)
 
 ![Apple Silicon](https://img.shields.io/badge/Apple-Silicon-000000?logo=apple&logoColor=white) ![Platform](https://img.shields.io/badge/Platform-macOS-lightgrey?logo=apple&logoColor=black) ![Swift](https://img.shields.io/badge/Swift-F05138?logo=swift&logoColor=white) ![AI | Claude Code](https://img.shields.io/badge/AI-Claude_Code-black?logo=anthropic&logoColor=white) ![AI | Copilot](https://img.shields.io/badge/AI-Copilot-black?logo=github&logoColor=white) ![AI | Ollama](https://img.shields.io/badge/AI-Ollama-black?logo=ollama&logoColor=white) ![macOS](https://img.shields.io/badge/macOS-14+-lightgrey?logo=apple)
 
-> **How it runs:** CodeWhisper is a native menu-bar app with no Dock icon and no separate background daemon; it lives entirely in the status bar and the macOS Services menu while running.
+> **How it runs:** ServiceLLM is a native menu-bar app with no Dock icon and no separate background daemon; it lives entirely in the status bar and the macOS Services menu while running.
 
-![CodeWhisper](docs/screenshot.png)
-
----
-
-> 💾 **Download:** [macOS (DMG)](https://github.com/9t29zhmwdh-coder/CodeWhisper/releases/latest/download/CodeWhisper.dmg): always the latest release, not code-signed/notarized (Gatekeeper will show a warning on first run, right-click → Open). Or build from source, see Build & Install below.
+![ServiceLLM](docs/screenshot.png)
 
 ---
 
-CodeWhisper's UI is available in English (default) and German, following your system language automatically; override it anytime in Settings → General.
+> 💾 **Download:** [macOS (DMG)](https://github.com/9t29zhmwdh-coder/ServiceLLM/releases/latest/download/ServiceLLM.dmg): always the latest release, not code-signed/notarized (Gatekeeper will show a warning on first run, right-click → Open). Or build from source, see Build & Install below.
 
-**In practice:** you select any code in any macOS app (Xcode, VS Code, a text editor, even a browser text field), right-click, choose one of CodeWhisper's actions from the Services submenu (Explain, Refactor, Optimize, Add Comments, Find Bugs, Write Tests, or a Custom prompt you define), and CodeWhisper sends that selection to whichever AI provider you configured in Settings (a cloud model like Claude, or a local model via Ollama/llama.cpp if you want nothing leaving your machine). The response then shows up the way you configured it: a floating popup window, copied to your clipboard, a macOS notification, or pasted directly back over your original selection.
+---
 
-![CodeWhisper: Explain triggered from Xcode's Services menu, response via a local Ollama model](docs/screenshot-xcode-services.png)
+ServiceLLM's UI is available in English (default) and German, following your system language automatically; override it anytime in Settings → General.
+
+**In practice:** you select code in any language, in any macOS app (Xcode, VS Code, a text editor, even a browser text field), right-click, choose one of ServiceLLM's actions from the Services submenu (Explain, Refactor, Optimize, Add Comments, Find Bugs, Write Tests, or a Custom prompt you define), and ServiceLLM sends that selection to whichever AI provider you configured in Settings (a cloud model like Claude, or a local model via Ollama/llama.cpp if you want nothing leaving your machine). The response then shows up the way you configured it: a floating popup window, copied to your clipboard, a macOS notification, or pasted directly back over your original selection.
+
+![ServiceLLM: Explain triggered from Xcode's Services menu, response via a local Ollama model](docs/screenshot-xcode-services.png)
 
 ---
 
@@ -40,13 +40,15 @@ CodeWhisper's UI is available in English (default) and German, following your sy
 
 | Preset | What it does |
 |---|---|
-| **Explain** | Plain-English explanation of selected code |
+| **Explain** | Plain-language explanation of the selected code |
 | **Refactor** | Improves readability and best practices |
 | **Optimize** | Performance-focused rewrite |
 | **Add Comments** | Inserts documentation comments |
 | **Find Bugs** | Analyses for bugs and edge cases |
-| **Write Tests** | Generates XCTest unit tests |
+| **Write Tests** | Generates unit tests in the framework that fits the language (XCTest, Jest, pytest) |
 | **Custom** | Your own system prompt from Settings |
+
+Every preset is language-agnostic: the prompt tells the model to work with whatever language it detects in the selection, so Swift, Python, TypeScript, Go, Rust, SQL, shell and anything else your model knows are all fair game.
 
 ### AI Providers
 
@@ -60,9 +62,11 @@ CodeWhisper's UI is available in English (default) and German, following your sy
 
 ### Local AI or cloud API, your choice
 
-CodeWhisper doesn't pick a side. Point it at a local model (Ollama or llama.cpp) and nothing you select ever leaves your Mac, no API key needed. Or point it at a cloud model (Claude, OpenAI, Mistral) with your own API key for a stronger model at the cost of that selection being sent to that provider. Switch anytime in Settings, per-preset temperature/token limits apply either way.
+ServiceLLM doesn't pick a side. Point it at a local model (Ollama or llama.cpp) and nothing you select ever leaves your Mac, no API key needed. Or point it at a cloud model (Claude, OpenAI, Mistral) with your own API key for a stronger model at the cost of that selection being sent to that provider. Switch anytime in Settings, per-preset temperature/token limits apply either way.
 
 ### Examples
+
+The two examples below happen to be Swift, but nothing in the presets is tied to it.
 
 **Find Bugs**, run on:
 ```swift
@@ -98,8 +102,8 @@ let cache = NSCache<NSString, UIImage>()
 ## Build & Install
 
 ```bash
-git clone https://github.com/9t29zhmwdh-coder/CodeWhisper
-cd CodeWhisper
+git clone https://github.com/9t29zhmwdh-coder/ServiceLLM
+cd ServiceLLM
 make install
 ```
 
@@ -109,31 +113,33 @@ make install
 
 ## First Launch
 
-1. Open `/Applications/CodeWhisper.app`; a `</>` icon appears in the menu bar.
+1. Open `/Applications/ServiceLLM.app`; a `</>` icon appears in the menu bar.
 2. Click it → **Settings** → choose your provider and enter the API key.
 3. Restart the menu bar app once (Quit → reopen) to activate the Services entries.
-4. In Xcode (or any editor): select code → right-click → **Services** → **CodeWhisper: Explain**.
+4. In Xcode (or any editor): select code → right-click → **Services** → **ServiceLLM: Explain**.
 
 > **Paste Back** requires *Accessibility* permission:  
-> System Settings → Privacy & Security → Accessibility → enable CodeWhisper.
+> System Settings → Privacy & Security → Accessibility → enable ServiceLLM.
 
 ---
 
 ## Uninstall / Cleanup
 
-- Delete `/Applications/CodeWhisper.app`
-- Remove stored settings: `defaults delete com.9t29zhmwdh.CodeWhisper`
+- Delete `/Applications/ServiceLLM.app`
+- Remove stored settings: `defaults delete com.9t29zhmwdh.ServiceLLM`
 - Remove stored API keys from Keychain Access.app (search for "claudeAPIKey", "openAIAPIKey", "mistralAPIKey")
-- Quit CodeWhisper first (or restart) so the NSServices entries disappear from the right-click Services menu
+- Quit ServiceLLM first (or restart) so the NSServices entries disappear from the right-click Services menu
 
 No other files or background services are left behind.
+
+> **Upgrading from 1.x (CodeWhisper):** the app was renamed in 2.0.0 and its bundle identifier changed from `com.9t29zhmwdh.CodeWhisper` to `com.9t29zhmwdh.ServiceLLM`. Your API key lives in the Keychain under the old identifier, so enter it once more in Settings after the upgrade. Then delete the old `/Applications/CodeWhisper.app` and run `defaults delete com.9t29zhmwdh.CodeWhisper` to clear its leftover settings.
 
 ---
 
 ## Architecture
 
 ```
-Sources/CodeWhisper/
+Sources/ServiceLLM/
 ├── LLM/               # Provider protocol + Ollama / llama.cpp / any OpenAI-compatible API
 ├── PromptEngine/      # Presets and prompt builder
 ├── ResponseFormatter/ # Markdown trim, code block extraction
@@ -150,13 +156,13 @@ Sources/CodeWhisper/
 ## Project Structure
 
 ```
-CodeWhisper/
+ServiceLLM/
 ├── Package.swift
 ├── Info.plist         # NSServices registration (7 entries), LSUIElement = true
 ├── Makefile           # build / bundle / install / clean
-└── Sources/CodeWhisper/
+└── Sources/ServiceLLM/
 ```
 
 ---
 
-**Author:** [Rafael Yilmaz](https://github.com/9t29zhmwdh-coder) · **Status:** Active · ![version](https://img.shields.io/github/v/release/9t29zhmwdh-coder/CodeWhisper?color=6b7280&style=flat-square) · **License:** MIT
+**Author:** [Rafael Yilmaz](https://github.com/9t29zhmwdh-coder) · **Status:** Active · ![version](https://img.shields.io/github/v/release/9t29zhmwdh-coder/ServiceLLM?color=6b7280&style=flat-square) · **License:** MIT

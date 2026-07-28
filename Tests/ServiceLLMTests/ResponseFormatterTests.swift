@@ -1,5 +1,5 @@
 import XCTest
-@testable import CodeWhisper
+@testable import ServiceLLM
 
 final class ResponseFormatterTests: XCTestCase {
 
