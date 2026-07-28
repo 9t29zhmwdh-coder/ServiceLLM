@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="RayStudio.png" alt="RayStudio Logo" width="120"/>
+  <img src="ServiceLLM.png" alt="ServiceLLM icon" width="120"/>
 
   <h1>ServiceLLM</h1>
 </div>

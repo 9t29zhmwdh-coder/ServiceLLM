@@ -13,6 +13,7 @@ Releases up to and including 1.0.2 were published under the project's previous n
 
 - README: a "Local AI or cloud API, your choice" section explaining the privacy tradeoff, plus concrete Find Bugs/Explain examples with real input/output.
 - Both READMEs now state explicitly that every preset is language-agnostic and list the languages this covers.
+- App icon. `make bundle` generates `AppIcon.icns` from the 1024px `ServiceLLM.png` via `sips` and `iconutil`, so only the source PNG is versioned. The icon also heads both READMEs.
 
 ### Changed
 
