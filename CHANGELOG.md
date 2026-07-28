@@ -7,6 +7,14 @@ Releases up to and including 1.0.2 were published under the project's previous n
 
 ## [Unreleased]
 
+## [2.0.2] - 2026-07-28
+
+### Changed
+
+- Bumped the pinned GitHub Actions: `actions/checkout` to v7.0.1, `actions/attest-build-provenance` to v4.1.1, `ossf/scorecard-action` to v2.4.4, `github/codeql-action/upload-sarif` to v4.37.3.
+- Every checkout pin now sits on the same SHA. `scorecard.yml` was one v7 patch behind the others.
+- Version comments next to the pins now carry the full version instead of the bare major, so `# v7.0.1` rather than `# v7`. Dependabot had been bumping the SHA while leaving the comment on the old major, which made the workflows claim a version they were not running.
+
 ## [2.0.1] - 2026-07-28
 
 ### Removed
