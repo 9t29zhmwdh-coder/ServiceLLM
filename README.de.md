@@ -12,7 +12,7 @@ Code markieren, Rechtsklick → Services → ServiceLLM: Explain. Fertig.
 
 [![CI](https://github.com/9t29zhmwdh-coder/ServiceLLM/actions/workflows/ci.yml/badge.svg)](https://github.com/9t29zhmwdh-coder/ServiceLLM/actions) [![CodeQL](https://github.com/9t29zhmwdh-coder/ServiceLLM/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/9t29zhmwdh-coder/ServiceLLM/security/code-scanning) [![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/9t29zhmwdh-coder/ServiceLLM/badge)](https://securityscorecards.dev/viewer/?uri=github.com/9t29zhmwdh-coder/ServiceLLM) [![OpenSSF Best Practices](https://www.bestpractices.dev/projects/13713/badge)](https://www.bestpractices.dev/projects/13713)
 
-![Apple Silicon](https://img.shields.io/badge/Apple-Silicon-000000?logo=apple&logoColor=white) ![Platform](https://img.shields.io/badge/Platform-macOS-lightgrey?logo=apple&logoColor=black) ![Swift](https://img.shields.io/badge/Swift-F05138?logo=swift&logoColor=white) ![AI | Claude Code](https://img.shields.io/badge/AI-Claude_Code-black?logo=anthropic&logoColor=white) ![AI | Copilot](https://img.shields.io/badge/AI-Copilot-black?logo=github&logoColor=white) ![AI | Ollama](https://img.shields.io/badge/AI-Ollama-black?logo=ollama&logoColor=white) ![macOS](https://img.shields.io/badge/macOS-14+-lightgrey?logo=apple)
+![Universal Binary](https://img.shields.io/badge/Universal-arm64_+_x86__64-000000?logo=apple&logoColor=white) ![Platform](https://img.shields.io/badge/Platform-macOS-lightgrey?logo=apple&logoColor=black) ![Swift](https://img.shields.io/badge/Swift-F05138?logo=swift&logoColor=white) ![AI | Claude Code](https://img.shields.io/badge/AI-Claude_Code-black?logo=anthropic&logoColor=white) ![AI | Copilot](https://img.shields.io/badge/AI-Copilot-black?logo=github&logoColor=white) ![AI | Ollama](https://img.shields.io/badge/AI-Ollama-black?logo=ollama&logoColor=white) ![macOS](https://img.shields.io/badge/macOS-14+-lightgrey?logo=apple)
 
 > **So läuft es:** ServiceLLM ist eine native Menüleisten-App ohne Dock-Icon und ohne separaten Hintergrunddienst; sie lebt vollständig in der Statusleiste und im macOS-Services-Menü, während sie läuft.
 
@@ -20,7 +20,7 @@ Code markieren, Rechtsklick → Services → ServiceLLM: Explain. Fertig.
 
 ---
 
-> 💾 **Download:** [macOS (DMG)](https://github.com/9t29zhmwdh-coder/ServiceLLM/releases/latest/download/ServiceLLM.dmg): immer die neueste Version, nur Apple Silicon, nicht codesigniert/notarisiert (Gatekeeper warnt beim ersten Start, Rechtsklick → Öffnen). Oder aus dem Quellcode bauen, siehe Build & Install unten.
+> 💾 **Download:** [macOS (DMG)](https://github.com/9t29zhmwdh-coder/ServiceLLM/releases/latest/download/ServiceLLM.dmg): immer die neueste Version, Universal Binary für Apple Silicon und Intel, nicht codesigniert/notarisiert (Gatekeeper warnt beim ersten Start, Rechtsklick → Öffnen). Oder aus dem Quellcode bauen, siehe Build & Install unten.
 
 ---
 
@@ -92,7 +92,7 @@ let cache = NSCache<NSString, UIImage>()
 ## Voraussetzungen
 
 - macOS 14 Sonoma oder neuer
-- Apple Silicon für das released DMG, das eine reine arm64-Binärversion enthält. Auf einem Intel-Mac stattdessen aus dem Quellcode bauen, `make install` erzeugt dort einen x86_64-Build.
+- Apple Silicon oder Intel. Das released DMG ist ein Universal Binary für beide, und `make bundle` erzeugt ebenfalls eines.
 - Xcode Command Line Tools (`xcode-select --install`)
 - Swift 5.9+
 
