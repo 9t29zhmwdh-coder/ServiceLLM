@@ -12,7 +12,7 @@ final class StatusBarController {
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
         if let button = statusItem.button {
             button.image = NSImage(systemSymbolName: "chevron.left.forwardslash.chevron.right",
-                                   accessibilityDescription: "CodeWhisper")
+                                   accessibilityDescription: "ServiceLLM")
         }
         buildMenu()
         // @Published's publisher fires during willSet, before the new value is actually
@@ -26,7 +26,7 @@ final class StatusBarController {
     private func buildMenu() {
         let menu = NSMenu()
 
-        let title = NSMenuItem(title: "CodeWhisper", action: nil, keyEquivalent: "")
+        let title = NSMenuItem(title: "ServiceLLM", action: nil, keyEquivalent: "")
         title.isEnabled = false
         menu.addItem(title)
         menu.addItem(.separator())

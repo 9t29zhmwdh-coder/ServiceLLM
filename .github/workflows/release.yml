@@ -24,21 +24,21 @@ jobs:
       - name: Create DMG
         run: |
           mkdir -p dmg_staging
-          cp -r CodeWhisper.app dmg_staging/
+          cp -r ServiceLLM.app dmg_staging/
           ln -s /Applications dmg_staging/Applications
-          hdiutil create -volname "CodeWhisper" -srcfolder dmg_staging -ov -format UDZO CodeWhisper.dmg
+          hdiutil create -volname "ServiceLLM" -srcfolder dmg_staging -ov -format UDZO ServiceLLM.dmg
           rm -rf dmg_staging
 
       - name: Attest build provenance
         uses: actions/attest-build-provenance@7668571508540a607bdfd90a87a560489fe372eb # v2.1.0
         with:
-          subject-path: CodeWhisper.dmg
+          subject-path: ServiceLLM.dmg
 
       - name: Create GitHub Release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          gh release create "${{ github.ref_name }}" CodeWhisper.dmg \
+          gh release create "${{ github.ref_name }}" ServiceLLM.dmg \
             --repo ${{ github.repository }} \
-            --title "CodeWhisper ${{ github.ref_name }}" \
+            --title "ServiceLLM ${{ github.ref_name }}" \
             --notes "See CHANGELOG.md for details. Not code-signed/notarized: macOS Gatekeeper will show a warning on first run (right-click → Open)."

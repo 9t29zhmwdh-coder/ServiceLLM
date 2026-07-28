@@ -1,4 +1,4 @@
-APP     = CodeWhisper
+APP     = ServiceLLM
 BUNDLE  = $(APP).app
 BINARY  = .build/release/$(APP)
 INSTALL = /Applications/$(BUNDLE)

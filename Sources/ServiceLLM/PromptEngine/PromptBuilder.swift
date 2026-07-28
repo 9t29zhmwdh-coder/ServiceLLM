@@ -20,7 +20,7 @@ enum PromptBuilder {
         ]
     }
 
-    /// Keeps the LLM's response language in sync with CodeWhisper's UI language,
+    /// Keeps the LLM's response language in sync with ServiceLLM's UI language,
     /// since the presets themselves are written in English regardless of locale.
     private static func languageInstruction(for language: AppLanguage) -> String {
         switch language {

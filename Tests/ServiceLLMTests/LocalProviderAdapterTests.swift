@@ -1,6 +1,6 @@
 import XCTest
 import SwiftAgent
-@testable import CodeWhisper
+@testable import ServiceLLM
 
 final class LocalProviderAdapterTests: XCTestCase {
 
@@ -16,14 +16,14 @@ final class LocalProviderAdapterTests: XCTestCase {
     }
 
     func testSwiftAgentErrorMapping() {
-        let httpError = SwiftAgent.LLMError.httpError(statusCode: 500, body: "boom").asCodeWhisperError()
+        let httpError = SwiftAgent.LLMError.httpError(statusCode: 500, body: "boom").asServiceLLMError()
         guard case .httpError(let code, let body) = httpError else {
             return XCTFail("Expected .httpError")
         }
         XCTAssertEqual(code, 500)
         XCTAssertEqual(body, "boom")
 
-        guard case .providerError(let message) = SwiftAgent.LLMError.cancelled.asCodeWhisperError() else {
+        guard case .providerError(let message) = SwiftAgent.LLMError.cancelled.asServiceLLMError() else {
             return XCTFail("Expected .providerError for cancelled")
         }
         XCTAssertEqual(message, "Request cancelled")

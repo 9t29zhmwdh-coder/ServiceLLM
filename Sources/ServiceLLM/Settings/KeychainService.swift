@@ -2,7 +2,7 @@ import Foundation
 import Security
 
 enum KeychainService {
-    private static let service = "com.9t29zhmwdh.CodeWhisper"
+    private static let service = "com.9t29zhmwdh.ServiceLLM"
 
     static func save(key: String, value: String) {
         let data = Data(value.utf8)

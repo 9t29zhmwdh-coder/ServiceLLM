@@ -2,29 +2,29 @@
 import PackageDescription
 
 let package = Package(
-    name: "CodeWhisper",
+    name: "ServiceLLM",
     platforms: [.macOS(.v14)],
     dependencies: [
         .package(url: "https://github.com/9t29zhmwdh-coder/SwiftAgent.git", from: "1.1.0")
     ],
     targets: [
         .executableTarget(
-            name: "CodeWhisper",
+            name: "ServiceLLM",
             dependencies: [
                 .product(name: "SwiftAgent", package: "SwiftAgent")
             ],
-            path: "Sources/CodeWhisper",
+            path: "Sources/ServiceLLM",
             swiftSettings: [
                 .enableExperimentalFeature("StrictConcurrency"),
             ]
         ),
         .testTarget(
-            name: "CodeWhisperTests",
+            name: "ServiceLLMTests",
             dependencies: [
-                "CodeWhisper",
+                "ServiceLLM",
                 .product(name: "SwiftAgent", package: "SwiftAgent")
             ],
-            path: "Tests/CodeWhisperTests",
+            path: "Tests/ServiceLLMTests",
             swiftSettings: [
                 .enableExperimentalFeature("StrictConcurrency"),
             ]

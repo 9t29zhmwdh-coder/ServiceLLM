@@ -1,13 +1,33 @@
 # Changelog
 
-All notable changes to CodeWhisper will be documented here.
+All notable changes to ServiceLLM will be documented here.
 Format based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+Releases up to and including 1.0.2 were published under the project's previous name, CodeWhisper.
+
 ## [Unreleased]
+
+## [2.0.0] - 2026-07-28
 
 ### Added
 
 - README: a "Local AI or cloud API, your choice" section explaining the privacy tradeoff, plus concrete Find Bugs/Explain examples with real input/output.
+- Both READMEs now state explicitly that every preset is language-agnostic and list the languages this covers.
+
+### Changed
+
+- **BREAKING: the project is now called ServiceLLM.** The old name collided with Amazon's CodeWhisperer trademark and with several unrelated products (a Chrome snippet organizer, an Android verification-code app), and it suggested a Swift-only tool. The presets have always been language-agnostic, so the name now says what the app is: an LLM in the macOS Services menu, for any language in any app.
+- **BREAKING: the bundle identifier changed** from `com.9t29zhmwdh.CodeWhisper` to `com.9t29zhmwdh.ServiceLLM`. This is the Keychain service name, so stored API keys are no longer found. Enter your key once more in Settings after upgrading. See "Uninstall / Cleanup" in the README for removing the leftovers of the 1.x install.
+- Services menu entries are now labelled `ServiceLLM: Explain`, `ServiceLLM: Refactor` and so on. Their `NSMessage` selectors are unchanged.
+- Renamed `Sources/CodeWhisper` to `Sources/ServiceLLM`, `Tests/CodeWhisperTests` to `Tests/ServiceLLMTests`, and the SwiftPM targets accordingly.
+
+### Fixed
+
+- README claimed the Write Tests preset generates XCTest unit tests. The prompt has always picked the framework matching the detected language (XCTest, Jest, pytest); both READMEs now say so.
+
+### Note
+
+- 1.0.2 was written to the changelog and Info.plist but never tagged or released. Its changes ship here.
 
 ## [1.0.2] - 2026-07-25
 
