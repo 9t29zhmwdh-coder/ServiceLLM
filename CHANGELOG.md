@@ -7,6 +7,12 @@ Releases up to and including 1.0.2 were published under the project's previous n
 
 ## [Unreleased]
 
+## [2.1.1] - 2026-07-28
+
+### Changed
+
+- The release job attests with `actions/attest` v4.2.0 instead of `actions/attest-build-provenance`, which is only a wrapper around it as of its v4 and which GitHub no longer recommends for new use. The attestation itself is unchanged, still the default SLSA build provenance. The job also gains the `artifact-metadata: write` permission that `actions/attest` requires, per `engineering-standards` v0.6.0.
+
 ## [2.1.0] - 2026-07-28
 
 ### Added
