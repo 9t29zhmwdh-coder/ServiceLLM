@@ -7,6 +7,13 @@ Releases up to and including 1.0.2 were published under the project's previous n
 
 ## [Unreleased]
 
+## [2.1.2] - 2026-07-28
+
+### Changed
+
+- CodeQL moved from GitHub's default setup to an advanced setup with a committed `.github/workflows/codeql.yml`. The default setup skips pull requests that touch no code of a given language, so a dependency pull request changing only a lock file reported `skipping` on the required checks forever and could never be merged. The workflow runs on every pull request regardless of what changed and uses the `security-extended` query suite, which the default setup does not allow choosing. Swift analysis runs on a macOS runner with `build-mode: autobuild`, since CodeQL cannot analyse Swift on Linux or without a build.
+- `.github/dependabot.yml` gains grouping: actions grouped wholesale, Swift packages grouped for minor and patch only so majors arrive individually. This repository predated the portfolio-wide rollout and still had the ungrouped original configuration. Follows `engineering-standards` v0.11.0.
+
 ## [2.1.1] - 2026-07-28
 
 ### Changed
