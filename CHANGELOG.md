@@ -7,6 +7,14 @@ Releases up to and including 1.0.2 were published under the project's previous n
 
 ## [Unreleased]
 
+## [2.1.3] - 2026-07-30
+
+### Changed
+
+- The dependency `SwiftAgent` is now `EmissaryKit`, following its rename. Two actively maintained Swift agent frameworks carried the old name on GitHub, both in the same category. The package URL, the product name and four `import` lines change with it, and the version floor moves to 1.2.0 because that is the first release carrying the new module name.
+
+---
+
 ## [2.1.2] - 2026-07-28
 
 ### Changed

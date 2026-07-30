@@ -1,5 +1,5 @@
 import Foundation
-import SwiftAgent
+import EmissaryKit
 
 protocol LLMProvider: Sendable {
     func chat(messages: [ChatMessage]) async throws -> String
@@ -26,21 +26,21 @@ enum LLMError: LocalizedError, Sendable {
 }
 
 extension ChatMessage {
-    /// Used by the local providers that delegate to SwiftAgent's HTTP layer.
-    func asSwiftAgentMessage() -> SwiftAgent.ChatMessage {
-        let role: SwiftAgent.ChatMessage.Role
+    /// Used by the local providers that delegate to EmissaryKit's HTTP layer.
+    func asEmissaryKitMessage() -> EmissaryKit.ChatMessage {
+        let role: EmissaryKit.ChatMessage.Role
         switch self.role {
         case .system:    role = .system
         case .user:      role = .user
         case .assistant: role = .assistant
         }
-        return SwiftAgent.ChatMessage(role: role, content: content)
+        return EmissaryKit.ChatMessage(role: role, content: content)
     }
 }
 
-extension SwiftAgent.LLMError {
-    /// Bridges SwiftAgent's error cases onto ServiceLLM's own `LLMError`,
-    /// used by the local providers that now delegate to SwiftAgent.
+extension EmissaryKit.LLMError {
+    /// Bridges EmissaryKit's error cases onto ServiceLLM's own `LLMError`,
+    /// used by the local providers that now delegate to EmissaryKit.
     func asServiceLLMError() -> LLMError {
         switch self {
         case .invalidURL(let u):            return .invalidURL(u)
