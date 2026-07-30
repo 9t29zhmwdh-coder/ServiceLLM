@@ -1,12 +1,12 @@
 {
   "pins" : [
     {
-      "identity" : "swiftagent",
+      "identity" : "emissarykit",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/9t29zhmwdh-coder/SwiftAgent.git",
+      "location" : "https://github.com/9t29zhmwdh-coder/EmissaryKit.git",
       "state" : {
-        "revision" : "b1b165c68cfd32f3fbf666cea0d992a2543672b5",
-        "version" : "1.1.0"
+        "revision" : "8940e5700d57d2cf35e01e3ad01a257ea9369a0f",
+        "version" : "1.2.0"
       }
     }
   ],

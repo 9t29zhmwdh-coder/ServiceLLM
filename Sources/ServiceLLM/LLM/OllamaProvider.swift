@@ -1,9 +1,9 @@
 import Foundation
 import EmissaryKit
 
-/// Delegiert an SwiftAgent's `OllamaProvider`, statt die HTTP-Logik doppelt zu pflegen.
+/// Delegiert an EmissaryKit's `OllamaProvider`, statt die HTTP-Logik doppelt zu pflegen.
 final class OllamaProvider: LLMProvider, @unchecked Sendable {
-    private let underlying: SwiftAgent.OllamaProvider
+    private let underlying: EmissaryKit.OllamaProvider
 
     init(
         model: String = "llama3.2",
@@ -12,7 +12,7 @@ final class OllamaProvider: LLMProvider, @unchecked Sendable {
         temperature: Double? = nil,
         maxTokens: Int? = nil
     ) {
-        self.underlying = SwiftAgent.OllamaProvider(
+        self.underlying = EmissaryKit.OllamaProvider(
             modelName: model,
             host: host,
             port: port,
@@ -22,11 +22,11 @@ final class OllamaProvider: LLMProvider, @unchecked Sendable {
     }
 
     func chat(messages: [ChatMessage]) async throws -> String {
-        let mapped = messages.map { $0.asSwiftAgentMessage() }
+        let mapped = messages.map { $0.asEmissaryKitMessage() }
         do {
             let response = try await underlying.chat(messages: mapped, tools: nil)
             return response.content
-        } catch let error as SwiftAgent.LLMError {
+        } catch let error as EmissaryKit.LLMError {
             throw error.asServiceLLMError()
         }
     }
