@@ -1,5 +1,5 @@
 import Foundation
-import SwiftAgent
+import EmissaryKit
 
 protocol LLMProvider: Sendable {
     func chat(messages: [ChatMessage]) async throws -> String

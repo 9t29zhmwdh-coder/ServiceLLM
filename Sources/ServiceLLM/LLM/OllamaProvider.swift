@@ -1,5 +1,5 @@
 import Foundation
-import SwiftAgent
+import EmissaryKit
 
 /// Delegiert an SwiftAgent's `OllamaProvider`, statt die HTTP-Logik doppelt zu pflegen.
 final class OllamaProvider: LLMProvider, @unchecked Sendable {

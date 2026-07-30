@@ -1,5 +1,5 @@
 import XCTest
-import SwiftAgent
+import EmissaryKit
 @testable import ServiceLLM
 
 final class LocalProviderAdapterTests: XCTestCase {

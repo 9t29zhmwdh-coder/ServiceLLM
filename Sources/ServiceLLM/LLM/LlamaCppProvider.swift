@@ -1,5 +1,5 @@
 import Foundation
-import SwiftAgent
+import EmissaryKit
 
 /// Delegiert an SwiftAgent's `LlamaCppProvider`, statt die HTTP-Logik doppelt zu pflegen.
 final class LlamaCppProvider: LLMProvider, @unchecked Sendable {

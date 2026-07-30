@@ -5,13 +5,13 @@ let package = Package(
     name: "ServiceLLM",
     platforms: [.macOS(.v14)],
     dependencies: [
-        .package(url: "https://github.com/9t29zhmwdh-coder/SwiftAgent.git", from: "1.1.0")
+        .package(url: "https://github.com/9t29zhmwdh-coder/EmissaryKit.git", from: "1.2.0")
     ],
     targets: [
         .executableTarget(
             name: "ServiceLLM",
             dependencies: [
-                .product(name: "SwiftAgent", package: "SwiftAgent")
+                .product(name: "EmissaryKit", package: "EmissaryKit")
             ],
             path: "Sources/ServiceLLM",
             swiftSettings: [
@@ -22,7 +22,7 @@ let package = Package(
             name: "ServiceLLMTests",
             dependencies: [
                 "ServiceLLM",
-                .product(name: "SwiftAgent", package: "SwiftAgent")
+                .product(name: "EmissaryKit", package: "EmissaryKit")
             ],
             path: "Tests/ServiceLLMTests",
             swiftSettings: [
