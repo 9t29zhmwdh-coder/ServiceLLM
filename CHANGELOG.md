@@ -7,6 +7,12 @@ Releases up to and including 1.0.2 were published under the project's previous n
 
 ## [Unreleased]
 
+## [2.1.4] - 2026-07-31
+
+### Changed
+
+- Both READMEs now say on the first screen why the Services menu is the point, which is that it belongs to macOS rather than to an app, so the same action works in the twenty programs that have no assistant. A short paragraph says that anyone already working in Copilot or Cursor gets more context there than a selection carries.
+
 ## [2.1.3] - 2026-07-30
 
 ### Changed

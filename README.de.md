@@ -10,6 +10,16 @@
 
 Code markieren, Rechtsklick → Services → ServiceLLM: Explain. Fertig.
 
+Kein Fenster, in das du wechseln musst, kein Einfügen, kein Verlieren der
+Stelle. Das funktioniert in Xcode, in VS Code, in einem Texteditor, in einem
+Browser-Textfeld, weil das Services-Menü zu macOS gehört und nicht zu einer
+App.
+
+**Nichts für dich, wenn** du ohnehin in einem Editor mit eingebautem
+AI-Assistenten arbeitest. Copilot und Cursor sehen die umgebende Datei, also
+mehr Kontext, als eine Markierung mitbringt. Das hier ist für die anderen
+zwanzig Programme, in denen es gar keinen Assistenten gibt.
+
 [![CI](https://github.com/9t29zhmwdh-coder/ServiceLLM/actions/workflows/ci.yml/badge.svg)](https://github.com/9t29zhmwdh-coder/ServiceLLM/actions) [![CodeQL](https://github.com/9t29zhmwdh-coder/ServiceLLM/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/9t29zhmwdh-coder/ServiceLLM/security/code-scanning) [![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/9t29zhmwdh-coder/ServiceLLM/badge)](https://securityscorecards.dev/viewer/?uri=github.com/9t29zhmwdh-coder/ServiceLLM) [![OpenSSF Best Practices](https://www.bestpractices.dev/projects/13713/badge)](https://www.bestpractices.dev/projects/13713)
 
 ![Universal Binary](https://img.shields.io/badge/Universal-arm64_+_x86__64-000000?logo=apple&logoColor=white) ![Platform](https://img.shields.io/badge/Platform-macOS-lightgrey?logo=apple&logoColor=black) ![Swift](https://img.shields.io/badge/Swift-F05138?logo=swift&logoColor=white) ![AI | Claude Code](https://img.shields.io/badge/AI-Claude_Code-black?logo=anthropic&logoColor=white) ![AI | Copilot](https://img.shields.io/badge/AI-Copilot-black?logo=github&logoColor=white) ![AI | Ollama](https://img.shields.io/badge/AI-Ollama-black?logo=ollama&logoColor=white) ![macOS](https://img.shields.io/badge/macOS-14+-lightgrey?logo=apple)
