@@ -10,6 +10,15 @@
 
 Select code, right-click → Services → ServiceLLM: Explain. That's it.
 
+No window to switch to, no paste, no losing your place. It works in Xcode, in
+VS Code, in a text editor, in a browser text field, because the Services menu
+is part of macOS rather than part of an app.
+
+**Not for you if** you already work inside an editor with an AI assistant
+built in. Copilot and Cursor see the surrounding file, which is more context
+than a selection carries. This is for the other twenty apps, where there is no
+assistant at all.
+
 [![CI](https://github.com/9t29zhmwdh-coder/ServiceLLM/actions/workflows/ci.yml/badge.svg)](https://github.com/9t29zhmwdh-coder/ServiceLLM/actions) [![CodeQL](https://github.com/9t29zhmwdh-coder/ServiceLLM/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/9t29zhmwdh-coder/ServiceLLM/security/code-scanning) [![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/9t29zhmwdh-coder/ServiceLLM/badge)](https://securityscorecards.dev/viewer/?uri=github.com/9t29zhmwdh-coder/ServiceLLM) [![OpenSSF Best Practices](https://www.bestpractices.dev/projects/13713/badge)](https://www.bestpractices.dev/projects/13713)
 
 ![Universal Binary](https://img.shields.io/badge/Universal-arm64_+_x86__64-000000?logo=apple&logoColor=white) ![Platform](https://img.shields.io/badge/Platform-macOS-lightgrey?logo=apple&logoColor=black) ![Swift](https://img.shields.io/badge/Swift-F05138?logo=swift&logoColor=white) ![AI | Claude Code](https://img.shields.io/badge/AI-Claude_Code-black?logo=anthropic&logoColor=white) ![AI | Copilot](https://img.shields.io/badge/AI-Copilot-black?logo=github&logoColor=white) ![AI | Ollama](https://img.shields.io/badge/AI-Ollama-black?logo=ollama&logoColor=white) ![macOS](https://img.shields.io/badge/macOS-14+-lightgrey?logo=apple)
