@@ -16,6 +16,10 @@ Dependency and CI updates merged since v2.1.5, each with green checks:
 - chore(deps): bump github.com/9t29zhmwdh-coder/emissarykit (#44)
 - chore(ci): bump the actions group with 4 updates (#45)
 
+
+### Fixed
+
+- `Info.plist` still said 2.1.4 after the 2.1.5 release; both version keys now say 2.1.6.
 ---
 
 ## [2.1.5] - 2026-08-04
