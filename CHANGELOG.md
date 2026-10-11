@@ -7,6 +7,14 @@ Releases up to and including 1.0.2 were published under the project's previous n
 
 ## [Unreleased]
 
+## [2.1.8] - 2026-10-11
+
+### Fixed
+
+- The OpenSSF Scorecard badge in the README showed a broken image on GitHub. The live badge is fetched through GitHub's image proxy, which gives up after four seconds, and the Scorecard lookup behind it often takes longer. The badge is now a small image stored in `docs/badges/` with the score of the last release, so it always loads.
+
+---
+
 ## [2.1.7] - 2026-09-30
 
 ### Changed
