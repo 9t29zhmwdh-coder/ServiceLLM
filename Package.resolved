@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/9t29zhmwdh-coder/EmissaryKit.git",
       "state" : {
-        "revision" : "47dc7994f4720f9f93760bc5430897c9a4650b0f",
-        "version" : "1.2.2"
+        "revision" : "85122c2e0f12159e2445d65cfee0b249346a7611",
+        "version" : "1.2.4"
       }
     }
   ],
