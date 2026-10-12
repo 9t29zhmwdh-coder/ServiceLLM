@@ -7,6 +7,16 @@ Releases up to and including 1.0.2 were published under the project's previous n
 
 ## [Unreleased]
 
+## [2.1.9] - 2026-10-12
+
+### Changed
+
+Dependency and CI updates merged since v2.1.8, each with green checks:
+
+- chore(ci): bump the actions group across 1 directory with 4 updates (#51)
+
+---
+
 ## [2.1.8] - 2026-10-11
 
 ### Fixed
