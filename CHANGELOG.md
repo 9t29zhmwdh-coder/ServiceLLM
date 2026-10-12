@@ -7,6 +7,16 @@ Releases up to and including 1.0.2 were published under the project's previous n
 
 ## [Unreleased]
 
+## [2.1.10] - 2026-10-12
+
+### Changed
+
+Dependency and CI updates merged since v2.1.9, each with green checks:
+
+- chore(deps): bump github.com/9t29zhmwdh-coder/emissarykit (#49)
+
+---
+
 ## [2.1.9] - 2026-10-12
 
 ### Changed
